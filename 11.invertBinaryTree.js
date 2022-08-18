@@ -12,3 +12,13 @@ function invertTree(head) {
   }
   return head;
 }
+
+// with recursion
+function invertTree(node) {
+  if (node !== null) {
+    const tmp = node.left;
+    node.left = invertTree(node.right);
+    node.right = invertTree(tmp);
+  }
+  return node;
+}
