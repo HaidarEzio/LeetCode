@@ -8,13 +8,13 @@ var diameterOfBinaryTree = function (root) {
   function dfs(node, level) {
     if (!node) return 0;
 
-    const left = dfs(node.left);
-    const right = dfs(node.right);
+    const left = dfs(node.left); // longest Left path
+    const right = dfs(node.right); // longest Right path
 
-    // update diameter at every node
+    // compare max with new Left + Right: update longest path
     diameter = Math.max(diameter, left + right);
 
-    // update the largest number of edge so far
+    // add 1 for edge: connecting node with its parent
     return 1 + Math.max(left, right);
   }
 };

@@ -9,7 +9,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-//* There are 2 cases for this, either iteravly, or recursively
+//* There are 2 cases for this, either iteratively, or recursively
 //? Iterative
 var reverseList = function (head) {
   let prev = null;

@@ -3,6 +3,7 @@
  * @param {string} t
  * @return {boolean}
  */
+//* iterable solution
 var isAnagram = function (s, t) {
   if (s.length !== t.length) {
     return false;
@@ -23,7 +24,7 @@ var isAnagram = function (s, t) {
       tMap[t[i]] = 1;
     }
   }
-
+  //* in here we check if the number of times a letter appears in sMap is the same as in tMap
   for (let k in sMap) {
     console.log(sMap[k], tMap[k]);
     if (sMap[k] !== tMap[k]) {
@@ -33,7 +34,7 @@ var isAnagram = function (s, t) {
 
   return true;
 };
-
+//* easy solution
 var isAnagrams = function (s, t) {
   if (s.length !== t.length) {
     return false;

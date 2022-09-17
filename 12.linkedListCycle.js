@@ -10,7 +10,7 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var hasCycle = function (head) {
+var hasCycle = (head) => {
   let fast = head;
   while (fast && fast.next) {
     head = head.next;

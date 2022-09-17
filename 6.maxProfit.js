@@ -6,10 +6,11 @@
 //   let sortedPrices = [...prices].sort((a, b) => a - b);
 //   let lowestPrice = sortedPrices[0];
 //   let highestPrice = sortedPrices[sortedPrices.length - 1];
-
+//   let count = 1;
 //   for (let i = 0; i < prices.length + 1; i++) {
 //     if (prices.indexOf(lowestPrice) > prices.indexOf(highestPrice)) {
-//       highestPrice = sortedPrices[sortedPrices.length - i];
+//       highestPrice = sortedPrices[sortedPrices.length - count];
+//       count++;
 //     }
 //   }
 //   return highestPrice - lowestPrice;

@@ -1,8 +1,7 @@
-if (s.length === 0) return true;
-if (s.length % 2 !== 0) return false;
 var isValid = function (s) {
   // 1 edge cases
-
+  if (s.length === 0) return true;
+  if (s.length % 2 !== 0) return false;
   let stack = [];
   const map = {
     ")": "(",
