@@ -15,6 +15,17 @@ function twoSums(nums, target) {
     }
   }
 }
+
+const twoSumRevisited = (nums, target) => {
+  for (let i = 0; i < nums.length; i++) {
+    let firstPart = nums[i];
+    let secondPart = target - firstPart;
+    if (nums.includes(secondPart) && nums.indexOf(secondPart) !== i) {
+      return [nums.indexOf(secondPart), i];
+    }
+  }
+};
+
 //* Best solution o(n)
 const twoSum = function (nums, target) {
   const num = [];
